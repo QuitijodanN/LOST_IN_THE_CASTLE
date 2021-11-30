@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MágicJordicontroller : MonoBehaviour
 {
+    public float jumpSpeed = 3;
 
     Rigidbody2D rigidbody2d;
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class MágicJordicontroller : MonoBehaviour
 
         if (Input.GetKey("space") && CheckGround.isGrounded)
         {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpSpeed);
         }
     }
 }
