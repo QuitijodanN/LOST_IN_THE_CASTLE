@@ -20,5 +20,10 @@ public class MágicJordicontroller : MonoBehaviour
         position.x = position.x + 3.0f * horizontal * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
+
+        if (Input.GetKey("space") && CheckGround.isGrounded)
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+        }
     }
 }
