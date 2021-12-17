@@ -18,7 +18,7 @@ public class MágicJordicontroller : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         Vector2 position = transform.position;
-        position.x = position.x + 3.0f * horizontal * Time.deltaTime;
+        position.x = position.x + 5.0f * horizontal * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
 
